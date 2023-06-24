@@ -160,7 +160,7 @@ const forgotPasswordRequest = async (req, res) => {
       const token = jwt.sign(payload, secret, { expiresIn: '10m' });
       const link = `https://passportjs-oauth2-form.onrender.com/auth/reset-password/${user._id}/${token}`;
       /* Send email to current user in order to change their password */
-      sendEmail(user.email, user._id, token);
+      sendEmail(link, user.email);
 
       req.flash(
         'forgotPasswordFlash2',

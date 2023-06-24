@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const sendEmail = async (email, id, token) => {
+const sendEmail = async (link, email) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -14,7 +14,7 @@ const sendEmail = async (email, id, token) => {
       from: process.env.NODEMAILER_USER,
       to: email,
       subject: 'Reset Password Link - PassportJs-Oauth2-Form',
-      html: `<p>You requested for reset password, kindly use this <a href="http://localhost:3000/auth/reset-password/${id}/${token}>Link</a> to reset your password</p>`,
+      html: `<p>You requested for reset password, kindly use this <a href="${link}>Link</a> to reset your password</p>`,
     });
 
     console.log('email sent sucessfully');
