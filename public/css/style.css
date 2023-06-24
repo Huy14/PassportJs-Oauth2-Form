@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --primaryColor: #fff;
+  --secondaryColor: #bbbb;
+  --dangerColor: #f32013;
+  --successColor: #2eb62c;
+  --border: #00ff7f;
+  --google-blue: #4285f4;
+  --button-active-blue: #1669f2;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  line-height: 1.7;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Kumbh Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(252, 92, 100, 0.7),
+    rgba(255, 255, 0, 0.7)
+  );
+}
+
+.btn__extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* GOOGLE BUTTON */
+.google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: var(--primaryColor);
+}
+
+.google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+.btn-text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: var(--primaryColor);
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.google-btn {
+  width: 184px;
+  height: 42px;
+  background-color: var(--google-blue);
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.google-btn:hover {
+  box-shadow: 0 0 6px var(--google-blue);
+}
+.google-btn:active {
+  background: var(--button-active-blue);
+}
+
+/* GITHUB BUTTON */
+.github-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: var(--primaryColor);
+}
+
+.github-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+.btn-text {
+  float: right;
+  margin: 11px 11px 0 0;
+  color: var(--primaryColor);
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.github-btn {
+  width: 184px;
+  height: 42px;
+  background-color: black;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.github-btn:hover {
+  box-shadow: 0 0 6px var(--primaryColor);
+}
+.github-btn:active {
+  background: var(--primaryColor);
+}
+
+/* LOGIN AND SIGN UP PAGE */
+.form__login,
+.form__signup {
+  width: 450px;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--border);
+  box-shadow: rgba(0, 0, 0, 0.15) 0.5rem 0.5rem 0.2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h2 {
+  color: #f32013;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+.form__group {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(1fr, auto));
+  margin-bottom: 1rem;
+}
+
+.form__group label {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.form__group input {
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.form__password--reset {
+  color: var(--secondaryColor);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.form__password--reset:hover {
+  color: var(--primaryColor);
+  transition: 0.2s;
+}
+
+.btn {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 0.5rem 4rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.btn__form--login,
+.btn__form--signup,
+.btn__form--signout {
+  background-color: var(--border);
+}
+
+.form__group p {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.form__group p a {
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+.form__group p a:hover {
+  color: var(--primaryColor);
+  transition: 0.2s;
+}
+
+.form__group small {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #f32013;
+}
+
+/* POPUP MESSAGE */
+.error {
+  color: #f32013;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+/* SECRETS PAGE */
+.main {
+  width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(150px, auto));
+}
+
+.btn__form--signout {
+  place-self: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 450px) {
+  .form__login,
+  .form__signup {
+    width: 350px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    transition: 0.5s;
+  }
+
+  .form__group label,
+  .form__group input {
+    font-size: 1rem;
+  }
+
+  .form__password--reset,
+  .form__group p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0 0 0;
+  }
+}

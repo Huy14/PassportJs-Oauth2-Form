@@ -1,0 +1,76 @@
+<%- include('partials/header.ejs') %>
+<section class="form__signup">
+  <h1>Sign Up</h1>
+  <form action="/auth/register" method="post">
+    <!-- POPUP MESSAGE -->
+    <% if (typeof error !== 'undefined') { %>
+    <div class="form__group">
+      <p class="error"><%= error %></p>
+    </div>
+    <% } %>
+    <div class="form__group">
+      <label for="email">Email</label>
+      <input
+        autocomplete="off"
+        type="email"
+        placeholder="Enter your email"
+        name="email"
+        id="email"
+        value="<%= email = typeof email === 'undefined' ? '' : email  %>"
+      />
+      <% if (typeof alert !== "undefined" && alert.email) { %>
+      <small> <%= alert.email.msg %> </small>
+      <% } %>
+    </div>
+
+    <div class="form__group">
+      <label for="username">Username</label>
+      <input
+        autocomplete="off"
+        type="text"
+        placeholder="Enter your username"
+        name="username"
+        id="username"
+        value="<%= username = typeof username === 'undefined' ? '' : username  %>"
+      />
+      <% if (typeof alert !== "undefined" && alert.username) { %>
+      <small> <%= alert.username.msg %> </small>
+      <% } %>
+    </div>
+
+    <div class="form__group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter your password"
+        name="password"
+        id="password"
+      />
+      <% if (typeof alert !== "undefined" && alert.password) { %>
+      <small> <%= alert.password.msg %> </small>
+      <% } %>
+    </div>
+
+    <div class="form__group">
+      <label for="passwordConfirmation">Confirm Password</label>
+      <input
+        type="password"
+        placeholder="Enter your password"
+        name="passwordConfirmation"
+        id="passwordConfirmation"
+      />
+      <% if (typeof alert !== "undefined" && alert.passwordConfirmation) { %>
+      <small> <%= alert.passwordConfirmation.msg %> </small>
+      <% } %>
+    </div>
+
+    <div class="form__group">
+      <button type="submit" class="btn btn__form--signup">Sign Up</button>
+    </div>
+
+    <div class="form__group">
+      <p>Already got an account? <a href="/auth/login">Log in</a></p>
+    </div>
+  </form>
+</section>
+<%- include('partials/footer.ejs') %>
